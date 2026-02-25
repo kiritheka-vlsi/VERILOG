@@ -1,9 +1,9 @@
- module halfadder(
-        input wire a,
-        input wire b,
-        output wire s,
-        output wire c
+module halfsubtractor(
+        input wire x,
+        input wire y,
+        output wire d,
+        output wire b
 );
-assign s = a|b;//sum
-assign c = a&b;//carry
+assign d = x^y;
+assign b = (~x) & y;
 endmodule
