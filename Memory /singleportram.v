@@ -15,7 +15,7 @@ module spram #(parameter datawidth = 32,
                         mem[add] = data;
         end
         always @(posedge clk) begin
-                if( !wr & cs )
+                if( !we & cs )
                         tempdata = mem[add];
         end
 assign data = cs & !we & oe? tempdata : 'hz;
