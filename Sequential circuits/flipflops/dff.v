@@ -13,7 +13,7 @@ module dff(
       q <=1'b1;
      end 
     else begin
-      q<=q;
+      q<=d;
     end
  
     
